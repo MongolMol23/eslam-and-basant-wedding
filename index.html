@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Eslam & Basant | Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    <main class="container">
+      <!-- Hero -->
+
+      <section class="hero">
+        <div class="hero-image">
+          <img src="images/couple.png" alt="Bride and Groom" />
+        </div>
+
+        <p class="subtitle">Wedding Invitation</p>
+
+        <h1 class="names">
+          <span>Eslam</span>
+
+          <span class="ampersand">&</span>
+
+          <span>Basant</span>
+        </h1>
+
+        <p class="verse" dir="rtl" lang="ar">
+          ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+          لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ
+          إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ﴾
+        </p>
+
+        <p class="translation">
+          Together with our families,
+          <br />
+          We are delighted to invite you to celebrate our wedding.
+        </p>
+      </section>
+
+      <!-- Details -->
+
+      <section class="details card">
+        <div class="detail">
+          <i class="bi bi-calendar-event"></i>
+
+          <span>24 July 2026</span>
+        </div>
+
+        <div class="detail">
+          <i class="bi bi-clock"></i>
+
+          <span>8:00 PM</span>
+        </div>
+
+        <div class="detail">
+          <i class="bi bi-geo-alt-fill"></i>
+
+          <span>Opera Hall, Aero Sport Club</span>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+
+      <section class="countdown">
+        <div class="time-box">
+          <h2 id="days">00</h2>
+          <span>Days</span>
+        </div>
+
+        <div class="time-box">
+          <h2 id="hours">00</h2>
+          <span>Hours</span>
+        </div>
+
+        <div class="time-box">
+          <h2 id="minutes">00</h2>
+          <span>Minutes</span>
+        </div>
+
+        <div class="time-box">
+          <h2 id="seconds">00</h2>
+          <span>Seconds</span>
+        </div>
+      </section>
+
+      <!-- Location -->
+
+      <section class="location">
+        <a
+          class="location-btn"
+          href="https://maps.app.goo.gl/QpNXC4iXrdHVixq18"
+          target="_blank"
+        >
+          <i class="bi bi-geo-alt-fill"></i>
+
+          View Location
+        </a>
+      </section>
+
+      <!-- RSVP -->
+
+      <section class="rsvp">
+        <h2>RSVP</h2>
+
+        <p>Please let us know if you'll be joining us.</p>
+        <p class="rsvp-arabic" dir="rtl" lang="ar">
+          وجودكم يشرفنا ويُكمل فرحتنا.🤍
+        </p>
+
+        <div class="rsvp-card">
+          <form id="rsvpForm" novalidate>
+            <div class="field-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+              <span class="error-text" id="nameError"
+                >Please enter your name.</span
+              >
+            </div>
+
+            <div class="field-group">
+              <div class="attendance-header">
+                <label class="field-label">Will you attend?</label>
+
+                <p class="field-description">برجاء تأكيد حضوركم.</p>
+              </div>
+
+              <input type="hidden" name="attendance" id="attendance" />
+
+              <div class="attendance-toggle" id="attendanceToggle">
+                <button type="button" class="attend-btn" data-value="Attending">
+                  <i class="bi bi-check-circle-fill"></i>
+                  Attending
+                </button>
+
+                <button
+                  type="button"
+                  class="attend-btn"
+                  data-value="Not Attending"
+                >
+                  <i class="bi bi-x-circle-fill"></i>
+                  Not Attending
+                </button>
+              </div>
+              <span class="error-text" id="attendanceError"
+                >Please let us know if you'll be attending.</span
+              >
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="note">
+                Message <span>(optional)</span>
+              </label>
+
+              <textarea
+                id="note"
+                name="note"
+                rows="4"
+                placeholder="Leave a message for the couple..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Confirm RSVP
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+
+          <p id="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/countdown.js"></script>
+    <script src="js/rsvp.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
